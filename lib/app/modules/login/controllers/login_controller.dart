@@ -85,6 +85,6 @@ class LoginController extends GetxController {
   }
 
   void gotoHomeScreen() {
-    Get.toNamed(Routes.HOME);
+    Get.toNamed(Routes.NAV_BAR);
   }
 }
