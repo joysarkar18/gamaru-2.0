@@ -23,7 +23,7 @@ void main() async {
           scaffoldBackgroundColor: AppColors.myDark,
           appBarTheme: AppBarTheme(backgroundColor: AppColors.myDark)),
       initialRoute: Supabase.instance.client.auth.currentUser != null
-          ? Routes.HOME
+          ? Routes.NAV_BAR
           : AppPages.INITIAL,
       getPages: AppPages.routes,
     ),

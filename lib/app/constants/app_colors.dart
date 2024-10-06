@@ -12,4 +12,5 @@ class AppColors {
   static Color oxfordBlue = const Color(0xff393d5f);
   static Color bottleGreen = const Color(0xff0a3d30);
   static Color myDark = const Color(0xff121212);
+  static Color bar = const Color(0xff1d1c1c);
 }
