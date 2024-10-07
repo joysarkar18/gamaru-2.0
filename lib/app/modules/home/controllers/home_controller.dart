@@ -1,23 +1,37 @@
+import 'package:gamaru/app/models/offer_model.dart';
+import 'package:gamaru/app/services/dialog_service.dart';
 import 'package:get/get.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  final RxList<OfferModel> offers = <OfferModel>[].obs;
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
   }
 
   @override
-  void onReady() {
+  void onReady() async {
     super.onReady();
+    DialogHelper.showLoading();
+    await fetchOffers();
+    DialogHelper.hideDialog();
   }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
+  Future<void> fetchOffers() async {
+    try {
+      final response = await Supabase.instance.client.from('offers').select();
+      print(response);
+      offers.value = response
+          .map(
+            (e) => OfferModel.fromJson(e),
+          )
+          .toList();
 
-  void increment() => count.value++;
+      print(offers);
+    } catch (e) {
+      DialogHelper.showError(e.toString());
+    }
+  }
 }

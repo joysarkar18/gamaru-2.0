@@ -74,6 +74,14 @@ class Assets {
   /// assets/fonts/Montserrat-ThinItalic.ttf
   static const String assetsFontsMontserratThinItalic = "assets/fonts/Montserrat-ThinItalic.ttf";
 
+  /// Assets for assetsIconsCoin
+  /// assets/icons/coin.json
+  static const String assetsIconsCoin = "assets/icons/coin.json";
+
+  /// Assets for assetsIconsGCoin
+  /// assets/icons/g_coin.svg
+  static const String assetsIconsGCoin = "assets/icons/g_coin.svg";
+
   /// Assets for assetsIconsGame
   /// assets/icons/game.svg
   static const String assetsIconsGame = "assets/icons/game.svg";
