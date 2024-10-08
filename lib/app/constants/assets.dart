@@ -74,9 +74,17 @@ class Assets {
   /// assets/fonts/Montserrat-ThinItalic.ttf
   static const String assetsFontsMontserratThinItalic = "assets/fonts/Montserrat-ThinItalic.ttf";
 
+  /// Assets for assetsIconsCalender
+  /// assets/icons/calender.svg
+  static const String assetsIconsCalender = "assets/icons/calender.svg";
+
   /// Assets for assetsIconsCoin
   /// assets/icons/coin.json
   static const String assetsIconsCoin = "assets/icons/coin.json";
+
+  /// Assets for assetsIconsCoinStatic
+  /// assets/icons/coin_static.svg
+  static const String assetsIconsCoinStatic = "assets/icons/coin_static.svg";
 
   /// Assets for assetsIconsGCoin
   /// assets/icons/g_coin.svg
@@ -97,6 +105,14 @@ class Assets {
   /// Assets for assetsIconsProfile
   /// assets/icons/profile.svg
   static const String assetsIconsProfile = "assets/icons/profile.svg";
+
+  /// Assets for assetsIconsSlots
+  /// assets/icons/slots.svg
+  static const String assetsIconsSlots = "assets/icons/slots.svg";
+
+  /// Assets for assetsIconsTrophy
+  /// assets/icons/trophy.svg
+  static const String assetsIconsTrophy = "assets/icons/trophy.svg";
 
   /// Assets for assetsImagesGamaruLogo
   /// assets/images/gamaru_logo.png
