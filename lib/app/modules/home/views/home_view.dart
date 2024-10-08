@@ -4,6 +4,7 @@ import 'package:gamaru/app/components/common_image_view.dart';
 import 'package:gamaru/app/components/custom_button.dart';
 import 'package:gamaru/app/components/featured_game_card.dart';
 import 'package:gamaru/app/components/game_card.dart';
+import 'package:gamaru/app/components/tournament_card.dart';
 import 'package:gamaru/app/constants/app_colors.dart';
 import 'package:gamaru/app/constants/app_text_styles.dart';
 import 'package:gamaru/app/constants/assets.dart';
@@ -104,6 +105,25 @@ class HomeView extends GetView<HomeController> {
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => const FeaturedGameCard(),
+                ),
+              ),
+              20.kheightBox,
+              Row(
+                children: [
+                  20.kwidthBox,
+                  Text(
+                    "Tournament",
+                    style: AppTextStyles.monserrat800(fontSize: 20),
+                  ),
+                ],
+              ),
+              10.kheightBox,
+              SizedBox(
+                height: 210.kh,
+                width: 100.w,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => const TournamentCard(),
                 ),
               ),
             ],
