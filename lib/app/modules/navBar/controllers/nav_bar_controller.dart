@@ -9,29 +9,14 @@ class NavBarController extends GetxController {
 
   // Define a list of page titles to display
   final pages = [
-    HomeView(),
-    MyGamesView(),
-    ProfileView(),
+    const HomeView(),
+    const MyGamesView(),
+    const ProfileView(),
   ];
   final titles = ["All Events", "My Games", "Profile"];
 
   // Function to change the index of the BottomNavigationBar
   void changeIndex(int index) {
     currentIndex.value = index;
-  }
-
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
   }
 }

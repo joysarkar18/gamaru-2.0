@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gamaru/app/components/common_image_view.dart';
-import 'package:gamaru/app/components/custom_button.dart';
 import 'package:gamaru/app/components/featured_game_card.dart';
 import 'package:gamaru/app/components/game_card.dart';
 import 'package:gamaru/app/components/tournament_card.dart';
-import 'package:gamaru/app/constants/app_colors.dart';
 import 'package:gamaru/app/constants/app_text_styles.dart';
-import 'package:gamaru/app/constants/assets.dart';
 import 'package:gamaru/app/services/responsive_ui_service.dart';
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';

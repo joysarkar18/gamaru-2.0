@@ -8,6 +8,7 @@ abstract class Routes {
   static const NAV_BAR = _Paths.NAV_BAR;
   static const PROFILE = _Paths.PROFILE;
   static const MY_GAMES = _Paths.MY_GAMES;
+  static const ONBOARDING = _Paths.ONBOARDING;
 }
 
 abstract class _Paths {
@@ -17,4 +18,5 @@ abstract class _Paths {
   static const NAV_BAR = '/nav-bar';
   static const PROFILE = '/profile';
   static const MY_GAMES = '/my-games';
+  static const ONBOARDING = '/onboarding';
 }

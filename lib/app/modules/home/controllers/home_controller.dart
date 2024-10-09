@@ -7,11 +7,6 @@ class HomeController extends GetxController {
   final RxList<OfferModel> offers = <OfferModel>[].obs;
 
   @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
   void onReady() async {
     super.onReady();
     DialogHelper.showLoading();

@@ -4,7 +4,6 @@ import 'package:gamaru/app/components/custom_button.dart';
 import 'package:gamaru/app/constants/app_colors.dart';
 import 'package:gamaru/app/constants/app_text_styles.dart';
 import 'package:gamaru/app/constants/assets.dart';
-import 'package:gamaru/app/modules/login/views/otp_view.dart';
 import 'package:gamaru/app/services/responsive_ui_service.dart';
 
 import 'package:get/get.dart';
