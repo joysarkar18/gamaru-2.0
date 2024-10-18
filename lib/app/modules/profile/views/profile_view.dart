@@ -71,6 +71,7 @@ class ProfileView extends GetView<ProfileController> {
                                 const Icon(
                                   Icons.bolt,
                                   color: Colors.yellow,
+                                  size: 18,
                                 ),
                                 Text(
                                   'Match Played',
@@ -105,6 +106,7 @@ class ProfileView extends GetView<ProfileController> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 const Icon(
+                                  size: 18,
                                   Icons.currency_rupee,
                                   color: Colors.yellow,
                                 ),
@@ -141,11 +143,12 @@ class ProfileView extends GetView<ProfileController> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 const Icon(
+                                  size: 18,
                                   Icons.diamond,
                                   color: Colors.yellow,
                                 ),
                                 Text(
-                                  'Tournament\nwin',
+                                  'Match win',
                                   style: AppTextStyles.monserrat600(
                                     color: AppColors.pinkSwan,
                                     fontSize: 10,
