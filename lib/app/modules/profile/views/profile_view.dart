@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gamaru/app/components/common_image_view.dart';
 import 'package:gamaru/app/components/custom_button.dart';
 import 'package:gamaru/app/constants/app_colors.dart';
 import 'package:gamaru/app/constants/app_text_styles.dart';
+import 'package:gamaru/app/constants/assets.dart';
 import 'package:gamaru/app/services/responsive_ui_service.dart';
 
 import 'package:get/get.dart';
@@ -14,222 +16,298 @@ class ProfileView extends GetView<ProfileController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.bar,
-      // appBar: AppBar(
-      //   title: Text(
-      //     'ProfileView',
-      //     style: AppTextStyles.monserrat700(color: AppColors.indigo),
-      //   ),
-      //   centerTitle: true,
-      // ),
       body: SafeArea(
         child: Center(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        CircleAvatar(
-                          radius: 40.kh,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      16.kheightBox,
+                      CircleAvatar(
+                        radius: 40.kh,
+                      ),
+                      5.kheightBox,
+                      Text(
+                        'Tanmoy Sarkar',
+                        style: AppTextStyles.monserrat600(
+                          // color: AppColors.java,
+                          fontSize: 18,
                         ),
-                        5.kheightBox,
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(8),
-                            ),
-                            color: AppColors.oxfordBlue.withOpacity(.25),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(2.0),
+                      ),
+                      Text(
+                        '8250260794',
+                        style: AppTextStyles.monserrat400(
+                          color: AppColors.pinkSwan,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                20.kheightBox,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      height: 80.kh,
+                      // width: 130.kw,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border:
+                              Border.all(width: 1, color: AppColors.pinkSwan)),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Icon(
-                                  Icons.currency_rupee,
-                                  color: AppColors.elSalva,
+                                const Icon(
+                                  Icons.bolt,
+                                  color: Colors.yellow,
                                 ),
                                 Text(
-                                  '10,000',
-                                  style: AppTextStyles.monserrat500(
-                                    color: Colors.greenAccent,
-                                    fontSize: 14,
+                                  'Match Played',
+                                  style: AppTextStyles.monserrat600(
+                                    color: AppColors.pinkSwan,
+                                    fontSize: 10,
                                   ),
-                                ),
+                                )
                               ],
                             ),
                           ),
-                        ),
-                      ],
+                          Text(
+                            '69',
+                            style: AppTextStyles.monserrat700(fontSize: 18),
+                          )
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.end,
+                    Container(
+                      height: 80.kh,
+                      // width: 130.kw,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border:
+                              Border.all(width: 1, color: AppColors.pinkSwan)),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const Icon(
+                                  Icons.currency_rupee,
+                                  color: Colors.yellow,
+                                ),
+                                Text(
+                                  'Wallet Balance',
+                                  style: AppTextStyles.monserrat600(
+                                    color: AppColors.pinkSwan,
+                                    fontSize: 10,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Text(
+                            '6969',
+                            style: AppTextStyles.monserrat700(fontSize: 18),
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 80.kh,
+                      // width: 130.kw,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border:
+                              Border.all(width: 1, color: AppColors.pinkSwan)),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const Icon(
+                                  Icons.diamond,
+                                  color: Colors.yellow,
+                                ),
+                                Text(
+                                  'Tournament\nwin',
+                                  style: AppTextStyles.monserrat600(
+                                    color: AppColors.pinkSwan,
+                                    fontSize: 10,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Text(
+                            '0',
+                            style: AppTextStyles.monserrat700(fontSize: 18),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Obx(
+                        () => Text(
+                          'Level: ${controller.currentLevel.value}',
+                          style: AppTextStyles.monserrat700(
+                            fontSize: 12,
+                            color: AppColors.elSalva,
+                          ),
+                        ),
+                      ),
+                      5.kheightBox,
+                      Obx(() => LinearProgressIndicator(
+                            borderRadius: BorderRadius.circular(10),
+                            value: controller.progress,
+                            backgroundColor: Colors.grey[300],
+                            color: AppColors.java,
+                            minHeight: 10,
+                          )),
+                      5.kheightBox,
+                      Obx(
+                        () => Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Tanmoy Sarkar',
+                              'Match played: ${controller.tournamentsParticipated.value}',
                               style: AppTextStyles.monserrat600(
-                                color: AppColors.java,
-                                fontSize: 18,
+                                fontSize: 12,
+                                color: AppColors.pinkSwan,
                               ),
                             ),
                             Text(
-                              '8250260794',
-                              style: AppTextStyles.monserrat400(
+                              'Out of: ${controller.maxTournamentsForNextLevel.value}',
+                              style: AppTextStyles.monserrat600(
+                                fontSize: 12,
                                 color: AppColors.pinkSwan,
-                                fontSize: 14,
                               ),
                             ),
                           ],
                         ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.more_vert,
-                            size: 25.kh,
-                            color: AppColors.pinkSwan,
+                      ),
+                      ElevatedButton(
+                        onPressed: () => controller.participateInTournament(),
+                        child: Text("Participate in Tournament"),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Payment methods',
+                        style: AppTextStyles.monserrat700(fontSize: 18),
+                      ),
+                      5.kheightBox,
+                      Container(
+                        height: 130.kh,
+                        width: 100.w,
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 1,
+                              color: AppColors.pinkSwan,
+                            ),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () {},
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    CommonImageView(
+                                      svgPath: Assets.assetsMoneyDeposit,
+                                      svgColor: AppColors.genoa,
+                                      height: 40,
+                                    ),
+                                    8.kheightBox,
+                                    Text(
+                                      'Recharge',
+                                      style: AppTextStyles.monserrat500(),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () {},
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    CommonImageView(
+                                      svgPath: Assets.assetsMoneyWithdraw,
+                                      svgColor: AppColors.elSalva,
+                                      height: 40,
+                                    ),
+                                    8.kheightBox,
+                                    Text(
+                                      'Withdraw',
+                                      style: AppTextStyles.monserrat500(),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () {},
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    CommonImageView(
+                                      svgPath: Assets.assetsMoneyTransactions,
+                                      svgColor: Colors.white,
+                                      height: 40,
+                                    ),
+                                    8.kheightBox,
+                                    Text(
+                                      'Transactions',
+                                      style: AppTextStyles.monserrat500(),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              // Padding(
-              //   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              //   child: Divider(),
-              // ),
-              50.kheightBox,
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  splashColor: AppColors.bottleGreen,
-                  onTap: () {
-                    print('tapped');
-                  },
-                  child: SizedBox(
-                    height: 40.kh,
-                    child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(
-                          Icons.account_balance,
-                          color: AppColors.pinkSwan,
-                          size: 30.kh,
-                        ),
-                        20.kwidthBox,
-                        Text(
-                          'Bank Details',
-                          style: AppTextStyles.monserrat400(
-                              color: AppColors.pinkSwan, fontSize: 18),
-                        )
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  splashColor: AppColors.bottleGreen,
-                  onTap: () {
-                    print('tapped');
-                  },
-                  child: SizedBox(
-                    height: 40.kh,
-                    child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(
-                          Icons.currency_rupee,
-                          color: AppColors.pinkSwan,
-                          size: 30.kh,
-                        ),
-                        20.kwidthBox,
-                        Text(
-                          'Withdraw',
-                          style: AppTextStyles.monserrat400(
-                              color: AppColors.pinkSwan, fontSize: 18),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  splashColor: AppColors.bottleGreen,
-                  onTap: () {
-                    print('tapped');
-                  },
-                  child: SizedBox(
-                    height: 40.kh,
-                    child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(
-                          Icons.usb,
-                          color: AppColors.pinkSwan,
-                          size: 30.kh,
-                        ),
-                        20.kwidthBox,
-                        Text(
-                          'About us',
-                          style: AppTextStyles.monserrat400(
-                              color: AppColors.pinkSwan, fontSize: 18),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  splashColor: AppColors.elSalva,
-                  onTap: () {
-                    print('tapped');
-                  },
-                  child: SizedBox(
-                    height: 40.kh,
-                    child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(
-                          Icons.logout,
-                          color: AppColors.pinkSwan,
-                          size: 30.kh,
-                        ),
-                        20.kwidthBox,
-                        Text(
-                          'Log out',
-                          style: AppTextStyles.monserrat400(
-                              color: AppColors.pinkSwan, fontSize: 18),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              const Spacer(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {},
-                  child: Text(
-                    'Terms & Conditions',
-                    style: AppTextStyles.monserrat400(color: AppColors.indigo),
-                  ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),
