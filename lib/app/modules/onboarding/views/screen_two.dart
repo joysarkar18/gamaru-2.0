@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gamaru/app/components/common_image_view.dart';
 import 'package:gamaru/app/constants/app_colors.dart';
 import 'package:gamaru/app/constants/app_text_styles.dart';
+import 'package:gamaru/app/constants/assets.dart';
+import 'package:gamaru/app/services/responsive_ui_service.dart';
 
 class ScreenTwo extends StatelessWidget {
   const ScreenTwo({super.key});
@@ -16,20 +19,31 @@ class ScreenTwo extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 20),
+              20.kheightBox,
               Text(
-                "How it works!",
+                " How it works?",
                 style: AppTextStyles.monserrat700(
                   fontSize: 36,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Center(
-                child: Text(
-                  "Sign up, join a tournament, play your favorite games, and win real money.",
-                  style: AppTextStyles.monserrat400(
-                      fontSize: 14, color: AppColors.dune),
+                child: CommonImageView(
+                  height: 290.kh,
+                  imagePath: Assets.assetsImagesPlayingGame,
                 ),
               ),
+              100.kheightBox,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Sign up, join a tournament, play your favorite games, and win real money.",
+                  textAlign: TextAlign.justify,
+                  style: AppTextStyles.monserrat400(
+                      fontSize: 14, color: AppColors.scorpion),
+                ),
+              ),
+              20.kheightBox,
             ],
           ),
         ),

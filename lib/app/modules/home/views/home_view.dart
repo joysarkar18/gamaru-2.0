@@ -54,11 +54,13 @@ class HomeView extends GetView<HomeController> {
                     "Featured Events",
                     style: AppTextStyles.monserrat800(fontSize: 20),
                   ),
+                  const Spacer(),
+                  TextButton(onPressed: () {}, child: const Text("View All"))
                 ],
               ),
               10.kheightBox,
               SizedBox(
-                height: 210.kh,
+                height: 245.kh,
                 width: 100.w,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -73,6 +75,8 @@ class HomeView extends GetView<HomeController> {
                     "All Games",
                     style: AppTextStyles.monserrat800(fontSize: 20),
                   ),
+                  const Spacer(),
+                  TextButton(onPressed: () {}, child: const Text("View All"))
                 ],
               ),
               10.kheightBox,
@@ -92,11 +96,13 @@ class HomeView extends GetView<HomeController> {
                     "Practice Games",
                     style: AppTextStyles.monserrat800(fontSize: 20),
                   ),
+                  const Spacer(),
+                  TextButton(onPressed: () {}, child: const Text("View All"))
                 ],
               ),
               10.kheightBox,
               SizedBox(
-                height: 210.kh,
+                height: 245.kh,
                 width: 100.w,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -111,6 +117,8 @@ class HomeView extends GetView<HomeController> {
                     "Tournament",
                     style: AppTextStyles.monserrat800(fontSize: 20),
                   ),
+                  const Spacer(),
+                  TextButton(onPressed: () {}, child: const Text("View All"))
                 ],
               ),
               10.kheightBox,

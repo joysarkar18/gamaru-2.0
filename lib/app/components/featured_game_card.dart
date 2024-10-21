@@ -13,10 +13,10 @@ class FeaturedGameCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 210.kh,
+      height: 245.kh,
       margin: const EdgeInsets.only(left: 18),
       padding: const EdgeInsets.all(8),
-      width: 270.kw,
+      width: 300.kw,
       decoration: BoxDecoration(
           color: AppColors.dune, borderRadius: BorderRadius.circular(16)),
       child: Column(
@@ -45,7 +45,7 @@ class FeaturedGameCard extends StatelessWidget {
                   horizontal: 6,
                 ),
                 height: 24,
-                width: 122.kw,
+                width: 135.kw,
                 decoration: BoxDecoration(
                     color: AppColors.oxfordBlue,
                     borderRadius: BorderRadius.circular(4)),
@@ -75,7 +75,7 @@ class FeaturedGameCard extends StatelessWidget {
               ),
               Container(
                 height: 24,
-                width: 122.kw,
+                width: 135.kw,
                 padding: const EdgeInsets.symmetric(
                   horizontal: 6,
                 ),
@@ -92,7 +92,7 @@ class FeaturedGameCard extends StatelessWidget {
                     ),
                     3.kwidthBox,
                     Text(
-                      "25 slot available",
+                      "14/25 slot available",
                       style: AppTextStyles.monserrat800(
                         fontSize: 10,
                       ),
@@ -111,7 +111,7 @@ class FeaturedGameCard extends StatelessWidget {
                   horizontal: 6,
                 ),
                 height: 24,
-                width: 122.kw,
+                width: 135.kw,
                 decoration: BoxDecoration(
                     color: AppColors.oxfordBlue,
                     borderRadius: BorderRadius.circular(4)),
@@ -138,7 +138,7 @@ class FeaturedGameCard extends StatelessWidget {
                   horizontal: 6,
                 ),
                 height: 24,
-                width: 122.kw,
+                width: 135.kw,
                 decoration: BoxDecoration(
                     color: AppColors.oxfordBlue,
                     borderRadius: BorderRadius.circular(4)),
@@ -168,18 +168,106 @@ class FeaturedGameCard extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 9),
-            child: Container(
-              decoration: BoxDecoration(
-                  border: Border.all(color: AppColors.bottleGreen, width: 1),
-                  borderRadius: BorderRadius.circular(10)),
-              child: CustomElevatedButton(
-                  buttonText: "Join Now",
-                  height: 30,
-                  width: 100.w,
-                  onPressed: () {}),
-            ),
+          8.kheightBox,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 6,
+                ),
+                height: 24,
+                width: 135.kw,
+                decoration: BoxDecoration(
+                    color: AppColors.oxfordBlue,
+                    borderRadius: BorderRadius.circular(4)),
+                child: Row(
+                  children: [
+                    SvgPicture.asset(
+                      Assets.assetsIconsMapIcon,
+                      colorFilter:
+                          ColorFilter.mode(AppColors.java, BlendMode.srcIn),
+                      height: 16,
+                    ),
+                    3.kwidthBox,
+                    Text(
+                      "Map : Erangle",
+                      style: AppTextStyles.monserrat800(
+                        fontSize: 10,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 6,
+                ),
+                height: 24,
+                width: 135.kw,
+                decoration: BoxDecoration(
+                    color: AppColors.oxfordBlue,
+                    borderRadius: BorderRadius.circular(4)),
+                child: Row(
+                  children: [
+                    SvgPicture.asset(
+                      Assets.assetsIconsCoinStatic,
+                      colorFilter:
+                          ColorFilter.mode(AppColors.java, BlendMode.srcIn),
+                      height: 15,
+                    ),
+                    3.kwidthBox,
+                    Text(
+                      "10",
+                      style: AppTextStyles.monserrat800(
+                        fontSize: 10,
+                      ),
+                    ),
+                    Text(
+                      " / Kill",
+                      style: AppTextStyles.monserrat800(
+                        fontSize: 10,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 9),
+                child: Container(
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(color: AppColors.bottleGreen, width: 1),
+                      borderRadius: BorderRadius.circular(10)),
+                  child: CustomElevatedButton(
+                      buttonText: "Details",
+                      height: 30,
+                      textStyle: AppTextStyles.monserrat600(),
+                      width: 135.kw,
+                      onPressed: () {}),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 9),
+                child: Container(
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(color: AppColors.bottleGreen, width: 1),
+                      borderRadius: BorderRadius.circular(10)),
+                  child: CustomElevatedButton(
+                      buttonText: "Join Now",
+                      height: 30,
+                      textStyle: AppTextStyles.monserrat600(),
+                      width: 135.kw,
+                      onPressed: () {}),
+                ),
+              ),
+            ],
           )
         ],
       ),

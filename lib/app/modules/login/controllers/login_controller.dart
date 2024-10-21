@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gamaru/app/modules/login/views/otp_view.dart';
 import 'package:gamaru/app/routes/app_pages.dart';
 import 'package:gamaru/app/services/dialog_service.dart';
+import 'package:gamaru/app/services/logger_service.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -44,6 +45,7 @@ class LoginController extends GetxController {
       gotoOtpView();
     } catch (e) {
       // Show error message and hide loading
+      LoggerService.logError(e.toString());
       DialogHelper.hideDialog();
       DialogHelper.showError(e.toString());
     }
@@ -63,7 +65,7 @@ class LoginController extends GetxController {
       if (response.session != null) {
         // OTP verification successful
         DialogHelper.hideDialog();
-        DialogHelper.showSuccess("OTP Verified Successfully!");
+        // DialogHelper.showSuccess("OTP Verified Successfully!");
 
         // Navigate to the next screen or perform additional logic
         gotoHomeScreen();
@@ -73,6 +75,7 @@ class LoginController extends GetxController {
         DialogHelper.showError("OTP verification failed. Please try again.");
       }
     } catch (e) {
+      LoggerService.logError(e.toString());
       DialogHelper.hideDialog();
       DialogHelper.showError("An error occurred: ${e.toString()}");
     }

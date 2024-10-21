@@ -1,5 +1,6 @@
 import 'package:gamaru/app/models/offer_model.dart';
 import 'package:gamaru/app/services/dialog_service.dart';
+import 'package:gamaru/app/services/logger_service.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -26,6 +27,7 @@ class HomeController extends GetxController {
 
       print(offers);
     } catch (e) {
+      LoggerService.logError(e.toString());
       DialogHelper.showError(e.toString());
     }
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gamaru/app/constants/app_colors.dart';
 import 'package:get/get.dart';
 import '../controllers/onboarding_controller.dart';
 import 'screen_one.dart';
@@ -34,8 +35,8 @@ class OnboardingView extends StatelessWidget {
                       height: 10,
                       decoration: BoxDecoration(
                         color: controller.currentIndex.value == index
-                            ? Colors.black
-                            : Colors.grey,
+                            ? AppColors.java
+                            : AppColors.scorpion,
                         shape: BoxShape.circle,
                       ),
                     );
