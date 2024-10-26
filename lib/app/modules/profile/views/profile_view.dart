@@ -229,30 +229,37 @@ class ProfileView extends GetView<ProfileController> {
                       ],
                     ),
                   ),
-                  ProfileOptionCard(
-                      onTap: () {},
-                      title: "My Wallet & Transactions",
-                      icon: Assets.assetsIconsWallet),
-                  ProfileOptionCard(
-                      onTap: () {},
-                      title: "Leaderboard",
-                      icon: Assets.assetsIconsLeaderboard),
-                  ProfileOptionCard(
-                      onTap: () {},
-                      title: "My Referrals",
-                      icon: Assets.assetsIconsRefer),
-                  ProfileOptionCard(
-                      onTap: () {},
-                      title: "Settings",
-                      icon: Assets.assetsIconsSettings),
-                  ProfileOptionCard(
-                      onTap: () {},
-                      title: "Terms and Conditions",
-                      icon: Assets.assetsIconsTermsAndConditions),
-                  ProfileOptionCard(
-                      onTap: () {},
-                      title: "Tutorial",
-                      icon: Assets.assetsIconsTutorial),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 6),
+                    child: Column(
+                      children: [
+                        ProfileOptionCard(
+                            onTap: () {},
+                            title: "My Wallet & Transactions",
+                            icon: Assets.assetsIconsWallet),
+                        ProfileOptionCard(
+                            onTap: () {},
+                            title: "Leaderboard",
+                            icon: Assets.assetsIconsLeaderboard),
+                        ProfileOptionCard(
+                            onTap: () {},
+                            title: "My Referrals",
+                            icon: Assets.assetsIconsRefer),
+                        ProfileOptionCard(
+                            onTap: () {},
+                            title: "Settings",
+                            icon: Assets.assetsIconsSettings),
+                        ProfileOptionCard(
+                            onTap: () {},
+                            title: "Terms and Conditions",
+                            icon: Assets.assetsIconsTermsAndConditions),
+                        ProfileOptionCard(
+                            onTap: () {},
+                            title: "Tutorial",
+                            icon: Assets.assetsIconsTutorial),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),

@@ -18,14 +18,14 @@ class HomeController extends GetxController {
   Future<void> fetchOffers() async {
     try {
       final response = await Supabase.instance.client.from('offers').select();
-      print(response);
+      LoggerService.logInfo(response.toString());
       offers.value = response
           .map(
             (e) => OfferModel.fromJson(e),
           )
           .toList();
 
-      print(offers);
+      LoggerService.logInfo(offers.toString());
     } catch (e) {
       LoggerService.logError(e.toString());
       DialogHelper.showError(e.toString());

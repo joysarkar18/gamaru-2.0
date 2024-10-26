@@ -9,6 +9,7 @@ abstract class Routes {
   static const PROFILE = _Paths.PROFILE;
   static const MY_GAMES = _Paths.MY_GAMES;
   static const ONBOARDING = _Paths.ONBOARDING;
+  static const GAME_DETAILS = _Paths.GAME_DETAILS;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const PROFILE = '/profile';
   static const MY_GAMES = '/my-games';
   static const ONBOARDING = '/onboarding';
+  static const GAME_DETAILS = '/game-details';
 }

@@ -46,7 +46,7 @@ class HomeView extends GetView<HomeController> {
                   );
                 }).toList(),
               ),
-              20.kheightBox,
+              10.kheightBox,
               Row(
                 children: [
                   20.kwidthBox,
@@ -88,7 +88,7 @@ class HomeView extends GetView<HomeController> {
                   itemBuilder: (context, index) => const GameCard(),
                 ),
               ),
-              20.kheightBox,
+              10.kheightBox,
               Row(
                 children: [
                   20.kwidthBox,
@@ -109,7 +109,7 @@ class HomeView extends GetView<HomeController> {
                   itemBuilder: (context, index) => const FeaturedGameCard(),
                 ),
               ),
-              20.kheightBox,
+              10.kheightBox,
               Row(
                 children: [
                   20.kwidthBox,

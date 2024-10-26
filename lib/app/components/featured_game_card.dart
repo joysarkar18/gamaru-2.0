@@ -5,7 +5,9 @@ import 'package:gamaru/app/components/custom_button.dart';
 import 'package:gamaru/app/constants/app_colors.dart';
 import 'package:gamaru/app/constants/app_text_styles.dart';
 import 'package:gamaru/app/constants/assets.dart';
+import 'package:gamaru/app/routes/app_pages.dart';
 import 'package:gamaru/app/services/responsive_ui_service.dart';
+import 'package:get/get.dart';
 
 class FeaturedGameCard extends StatelessWidget {
   const FeaturedGameCard({super.key});
@@ -249,7 +251,9 @@ class FeaturedGameCard extends StatelessWidget {
                       height: 30,
                       textStyle: AppTextStyles.monserrat600(),
                       width: 135.kw,
-                      onPressed: () {}),
+                      onPressed: () {
+                        Get.toNamed(Routes.GAME_DETAILS);
+                      }),
                 ),
               ),
               Padding(

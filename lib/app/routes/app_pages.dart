@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/gameDetails/bindings/game_details_binding.dart';
+import '../modules/gameDetails/views/game_details_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.ONBOARDING,
       page: () => OnboardingView(),
       binding: OnboardingBinding(),
+    ),
+    GetPage(
+      name: _Paths.GAME_DETAILS,
+      page: () => const GameDetailsView(),
+      binding: GameDetailsBinding(),
     ),
   ];
 }

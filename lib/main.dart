@@ -26,7 +26,12 @@ void main() async {
       theme: ThemeData(
           primaryColor: AppColors.java,
           scaffoldBackgroundColor: AppColors.myDark,
-          appBarTheme: AppBarTheme(backgroundColor: AppColors.myDark)),
+          appBarTheme: AppBarTheme(
+            backgroundColor: AppColors.myDark,
+            iconTheme: const IconThemeData(
+              color: Colors.white,
+            ),
+          )),
       initialRoute: Supabase.instance.client.auth.currentUser != null
           ? Routes.NAV_BAR
           : AppPages.INITIAL,
