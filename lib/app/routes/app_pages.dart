@@ -12,6 +12,8 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/myGames/bindings/my_games_binding.dart';
 import '../modules/myGames/views/my_games_view.dart';
+import '../modules/myTeams/bindings/my_teams_binding.dart';
+import '../modules/myTeams/views/my_teams_view.dart';
 import '../modules/navBar/bindings/nav_bar_binding.dart';
 import '../modules/navBar/views/nav_bar_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
@@ -22,6 +24,8 @@ import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/tournaments/bindings/tournaments_binding.dart';
 import '../modules/tournaments/views/tournaments_view.dart';
+import '../modules/videos/bindings/videos_binding.dart';
+import '../modules/videos/views/videos_view.dart';
 
 part 'app_routes.dart';
 
@@ -85,6 +89,16 @@ class AppPages {
       name: _Paths.TOURNAMENTS,
       page: () => const TournamentsView(),
       binding: TournamentsBinding(),
+    ),
+    GetPage(
+      name: _Paths.MY_TEAMS,
+      page: () => const MyTeamsView(),
+      binding: MyTeamsBinding(),
+    ),
+    GetPage(
+      name: _Paths.VIDEOS,
+      page: () => const VideosView(),
+      binding: VideosBinding(),
     ),
   ];
 }

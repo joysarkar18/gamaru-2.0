@@ -11,6 +11,7 @@ class CustomElevatedButton extends StatelessWidget {
   final Widget? leadingIcon;
   final TextStyle? textStyle;
   final Color? buttonColor;
+  final double? borderRadious;
 
   const CustomElevatedButton({
     super.key,
@@ -21,6 +22,7 @@ class CustomElevatedButton extends StatelessWidget {
     this.leadingIcon,
     this.textStyle,
     this.buttonColor,
+    this.borderRadious,
   });
 
   @override
@@ -33,7 +35,9 @@ class CustomElevatedButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: buttonColor ?? AppColors.java,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: borderRadious != null
+                ? BorderRadius.circular(borderRadious!)
+                : BorderRadius.circular(8),
           ),
         ),
         child: Row(

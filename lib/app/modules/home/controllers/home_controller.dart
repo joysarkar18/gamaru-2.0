@@ -48,4 +48,12 @@ class HomeController extends GetxController {
   void gotoTournaments() {
     Get.toNamed(Routes.TOURNAMENTS);
   }
+
+  void gotoMyTeams() {
+    Get.toNamed(Routes.MY_TEAMS);
+  }
+
+  void gotoVideos() {
+    Get.toNamed(Routes.VIDEOS);
+  }
 }

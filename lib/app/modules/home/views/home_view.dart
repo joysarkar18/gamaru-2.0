@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gamaru/app/components/common_image_view.dart';
+import 'package:gamaru/app/components/custom_button.dart';
 import 'package:gamaru/app/components/featured_game_card.dart';
 import 'package:gamaru/app/components/game_card.dart';
 import 'package:gamaru/app/components/tournament_card.dart';
@@ -19,13 +20,32 @@ class HomeView extends GetView<HomeController> {
         child: Obx(
           () => Column(
             children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    CustomElevatedButton(
+                        buttonText: "Videos",
+                        height: 40.kh,
+                        width: 46.w,
+                        onPressed: controller.gotoVideos),
+                    CustomElevatedButton(
+                        buttonText: "My Teams",
+                        height: 40.kh,
+                        width: 46.w,
+                        onPressed: controller.gotoMyTeams)
+                  ],
+                ),
+              ),
               10.kheightBox,
               CarouselSlider(
                 options: CarouselOptions(
                   // Adjust the height of the carousel
                   autoPlay: true, // Enable auto-rotation
+                  viewportFraction: 0.95,
                   enlargeCenterPage: true, // Enlarge the center image
-                  aspectRatio: 16 / 3,
+                  aspectRatio: 18 / 3.4,
                   // Set the aspect ratio of the images
                   autoPlayCurve: Curves.easeIn,
                   autoPlayInterval:
@@ -46,7 +66,7 @@ class HomeView extends GetView<HomeController> {
                   );
                 }).toList(),
               ),
-              10.kheightBox,
+              8.kheightBox,
               Row(
                 children: [
                   20.kwidthBox,

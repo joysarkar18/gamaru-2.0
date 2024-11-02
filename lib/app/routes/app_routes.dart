@@ -14,6 +14,8 @@ abstract class Routes {
   static const ALL_GAMES = _Paths.ALL_GAMES;
   static const PRACICE_GAMES = _Paths.PRACICE_GAMES;
   static const TOURNAMENTS = _Paths.TOURNAMENTS;
+  static const MY_TEAMS = _Paths.MY_TEAMS;
+  static const VIDEOS = _Paths.VIDEOS;
 }
 
 abstract class _Paths {
@@ -29,4 +31,6 @@ abstract class _Paths {
   static const ALL_GAMES = '/all-games';
   static const PRACICE_GAMES = '/pracice-games';
   static const TOURNAMENTS = '/tournaments';
+  static const MY_TEAMS = '/my-teams';
+  static const VIDEOS = '/videos';
 }
