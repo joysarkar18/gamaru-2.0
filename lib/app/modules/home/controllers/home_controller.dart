@@ -1,4 +1,5 @@
 import 'package:gamaru/app/models/offer_model.dart';
+import 'package:gamaru/app/routes/app_pages.dart';
 import 'package:gamaru/app/services/dialog_service.dart';
 import 'package:gamaru/app/services/logger_service.dart';
 import 'package:get/get.dart';
@@ -30,5 +31,21 @@ class HomeController extends GetxController {
       LoggerService.logError(e.toString());
       DialogHelper.showError(e.toString());
     }
+  }
+
+  void gotoFeaturedEvent() {
+    Get.toNamed(Routes.FEATURED_EVENTS);
+  }
+
+  void gotoAllGames() {
+    Get.toNamed(Routes.ALL_GAMES);
+  }
+
+  void gotoPracticeGames() {
+    Get.toNamed(Routes.PRACICE_GAMES);
+  }
+
+  void gotoTournaments() {
+    Get.toNamed(Routes.TOURNAMENTS);
   }
 }

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:gamaru/app/modules/login/views/otp_view.dart';
 import 'package:gamaru/app/routes/app_pages.dart';
@@ -9,6 +10,9 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 class LoginController extends GetxController {
   final supabase = Supabase.instance.client;
   final TextEditingController phoneNumberController = TextEditingController();
+  // Countdown timer for OTP resend
+  RxInt countdown = 0.obs;
+  Timer? _timer;
 
   @override
   void onClose() {
@@ -42,11 +46,35 @@ class LoginController extends GetxController {
 
       // Hide loading and navigate to OTP view
       DialogHelper.hideDialog();
+
+      startCountdown();
       gotoOtpView();
     } catch (e) {
       // Show error message and hide loading
       LoggerService.logError(e.toString());
       DialogHelper.hideDialog();
+      DialogHelper.showError(e.toString());
+    }
+  }
+
+  // Start the 30-second countdown timer
+  void startCountdown() {
+    countdown.value = 30; // Start from 30 seconds
+    _timer?.cancel(); // Cancel any previous timer
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (countdown.value > 0) {
+        countdown.value--;
+      } else {
+        _timer?.cancel(); // Stop the timer when countdown reaches 0
+      }
+    });
+  }
+
+  Future<void> resendOtp() async {
+    try {
+      sendOtp();
+      startCountdown();
+    } catch (e) {
       DialogHelper.showError(e.toString());
     }
   }
@@ -88,6 +116,6 @@ class LoginController extends GetxController {
   }
 
   void gotoHomeScreen() {
-    Get.toNamed(Routes.NAV_BAR);
+    Get.offAllNamed(Routes.NAV_BAR);
   }
 }

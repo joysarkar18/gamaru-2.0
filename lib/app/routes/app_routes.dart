@@ -10,6 +10,10 @@ abstract class Routes {
   static const MY_GAMES = _Paths.MY_GAMES;
   static const ONBOARDING = _Paths.ONBOARDING;
   static const GAME_DETAILS = _Paths.GAME_DETAILS;
+  static const FEATURED_EVENTS = _Paths.FEATURED_EVENTS;
+  static const ALL_GAMES = _Paths.ALL_GAMES;
+  static const PRACICE_GAMES = _Paths.PRACICE_GAMES;
+  static const TOURNAMENTS = _Paths.TOURNAMENTS;
 }
 
 abstract class _Paths {
@@ -21,4 +25,8 @@ abstract class _Paths {
   static const MY_GAMES = '/my-games';
   static const ONBOARDING = '/onboarding';
   static const GAME_DETAILS = '/game-details';
+  static const FEATURED_EVENTS = '/featured-events';
+  static const ALL_GAMES = '/all-games';
+  static const PRACICE_GAMES = '/pracice-games';
+  static const TOURNAMENTS = '/tournaments';
 }

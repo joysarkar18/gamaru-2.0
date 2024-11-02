@@ -4,13 +4,13 @@ import 'package:gamaru/app/constants/app_text_styles.dart';
 import 'package:gamaru/app/services/responsive_ui_service.dart';
 
 class GameCard extends StatelessWidget {
-  const GameCard({super.key});
-
+  const GameCard({super.key, required this.isHome});
+  final bool isHome;
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 18),
-      height: 130.kh,
+      margin: EdgeInsets.only(left: isHome ? 18 : 0),
+      height: 136,
       width: 100.kw,
       child: Column(
         children: [

@@ -55,16 +55,22 @@ class HomeView extends GetView<HomeController> {
                     style: AppTextStyles.monserrat800(fontSize: 20),
                   ),
                   const Spacer(),
-                  TextButton(onPressed: () {}, child: const Text("View All"))
+                  TextButton(
+                      onPressed: controller.gotoFeaturedEvent,
+                      child: const Text("View All"))
                 ],
               ),
               10.kheightBox,
               SizedBox(
-                height: 245.kh,
+                height: 248,
                 width: 100.w,
                 child: ListView.builder(
+                  itemCount: 8,
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => const FeaturedGameCard(),
+                  itemBuilder: (context, index) => FeaturedGameCard(
+                    width: 300.kw,
+                    isHome: true,
+                  ),
                 ),
               ),
               20.kheightBox,
@@ -76,16 +82,21 @@ class HomeView extends GetView<HomeController> {
                     style: AppTextStyles.monserrat800(fontSize: 20),
                   ),
                   const Spacer(),
-                  TextButton(onPressed: () {}, child: const Text("View All"))
+                  TextButton(
+                      onPressed: controller.gotoAllGames,
+                      child: const Text("View All"))
                 ],
               ),
               10.kheightBox,
               SizedBox(
-                height: 130.kh,
+                height: 134,
                 width: 100.w,
                 child: ListView.builder(
+                  itemCount: 8,
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => const GameCard(),
+                  itemBuilder: (context, index) => const GameCard(
+                    isHome: true,
+                  ),
                 ),
               ),
               10.kheightBox,
@@ -97,16 +108,22 @@ class HomeView extends GetView<HomeController> {
                     style: AppTextStyles.monserrat800(fontSize: 20),
                   ),
                   const Spacer(),
-                  TextButton(onPressed: () {}, child: const Text("View All"))
+                  TextButton(
+                      onPressed: controller.gotoPracticeGames,
+                      child: const Text("View All"))
                 ],
               ),
               10.kheightBox,
               SizedBox(
-                height: 245.kh,
+                height: 248,
                 width: 100.w,
                 child: ListView.builder(
+                  itemCount: 8,
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => const FeaturedGameCard(),
+                  itemBuilder: (context, index) => FeaturedGameCard(
+                    width: 300.kw,
+                    isHome: true,
+                  ),
                 ),
               ),
               10.kheightBox,
@@ -114,22 +131,28 @@ class HomeView extends GetView<HomeController> {
                 children: [
                   20.kwidthBox,
                   Text(
-                    "Tournament",
+                    "Tournaments",
                     style: AppTextStyles.monserrat800(fontSize: 20),
                   ),
                   const Spacer(),
-                  TextButton(onPressed: () {}, child: const Text("View All"))
+                  TextButton(
+                      onPressed: controller.gotoTournaments,
+                      child: const Text("View All"))
                 ],
               ),
               10.kheightBox,
               SizedBox(
-                height: 210.kh,
+                height: 214,
                 width: 100.w,
                 child: ListView.builder(
+                  itemCount: 8,
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => const TournamentCard(),
+                  itemBuilder: (context, index) => const TournamentCard(
+                    isHome: true,
+                  ),
                 ),
               ),
+              30.kheightBox,
             ],
           ),
         ),

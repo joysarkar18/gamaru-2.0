@@ -72,6 +72,7 @@ class NavBarView extends GetView<NavBarController> {
       bottomNavigationBar: Obx(() {
         // Wrap the BottomNavigationBar with Obx to make it reactive
         return BottomNavigationBar(
+          elevation: 3,
           backgroundColor: AppColors.bar,
           currentIndex: controller.currentIndex.value,
           selectedItemColor:
@@ -79,8 +80,8 @@ class NavBarView extends GetView<NavBarController> {
           unselectedItemColor:
               Colors.white54, // Change this to your desired inactive color
           onTap: controller.changeIndex,
-          selectedLabelStyle: AppTextStyles.monserrat600(height: 2),
-          unselectedLabelStyle: AppTextStyles.monserrat500(height: 2),
+          selectedLabelStyle: AppTextStyles.monserrat600(height: 1.3),
+          unselectedLabelStyle: AppTextStyles.monserrat500(height: 1.3),
           items: [
             BottomNavigationBarItem(
               icon: SvgPicture.asset(

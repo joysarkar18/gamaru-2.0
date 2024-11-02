@@ -66,30 +66,31 @@ class ProfileView extends GetView<ProfileController> {
                                 width: 1, color: AppColors.pinkSwan)),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Icon(
-                                    Icons.bolt,
-                                    color: Colors.yellow,
-                                    size: 18,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(
+                                  Icons.bolt,
+                                  color: Colors.yellow,
+                                  size: 18,
+                                ),
+                                Text(
+                                  'Match Played',
+                                  style: AppTextStyles.monserrat600(
+                                    color: AppColors.pinkSwan,
+                                    fontSize: 8,
                                   ),
-                                  Text(
-                                    'Match Played',
-                                    style: AppTextStyles.monserrat600(
-                                      color: AppColors.pinkSwan,
-                                      fontSize: 10,
-                                    ),
-                                  )
-                                ],
-                              ),
+                                )
+                              ],
                             ),
-                            Text(
-                              '69',
-                              style: AppTextStyles.monserrat700(fontSize: 18),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 4),
+                              child: Text(
+                                '69',
+                                style: AppTextStyles.monserrat700(fontSize: 18),
+                              ),
                             )
                           ],
                         ),
@@ -103,30 +104,31 @@ class ProfileView extends GetView<ProfileController> {
                                 width: 1, color: AppColors.pinkSwan)),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Icon(
-                                    size: 18,
-                                    Icons.currency_rupee,
-                                    color: Colors.yellow,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(
+                                  size: 16,
+                                  Icons.currency_rupee,
+                                  color: Colors.yellow,
+                                ),
+                                Text(
+                                  'Total Earning',
+                                  style: AppTextStyles.monserrat600(
+                                    color: AppColors.pinkSwan,
+                                    fontSize: 8,
                                   ),
-                                  Text(
-                                    'Tatal Earning',
-                                    style: AppTextStyles.monserrat600(
-                                      color: AppColors.pinkSwan,
-                                      fontSize: 10,
-                                    ),
-                                  )
-                                ],
-                              ),
+                                )
+                              ],
                             ),
-                            Text(
-                              '6969',
-                              style: AppTextStyles.monserrat700(fontSize: 18),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 4),
+                              child: Text(
+                                '6969',
+                                style: AppTextStyles.monserrat700(fontSize: 18),
+                              ),
                             )
                           ],
                         ),
@@ -140,30 +142,31 @@ class ProfileView extends GetView<ProfileController> {
                                 width: 1, color: AppColors.pinkSwan)),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Icon(
-                                    size: 16,
-                                    Icons.diamond,
-                                    color: Colors.yellow,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(
+                                  size: 16,
+                                  Icons.diamond,
+                                  color: Colors.yellow,
+                                ),
+                                Text(
+                                  ' Match win',
+                                  style: AppTextStyles.monserrat600(
+                                    color: AppColors.pinkSwan,
+                                    fontSize: 8,
                                   ),
-                                  Text(
-                                    ' Match win',
-                                    style: AppTextStyles.monserrat600(
-                                      color: AppColors.pinkSwan,
-                                      fontSize: 10,
-                                    ),
-                                  )
-                                ],
-                              ),
+                                )
+                              ],
                             ),
-                            Text(
-                              '0',
-                              style: AppTextStyles.monserrat700(fontSize: 18),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 4),
+                              child: Text(
+                                '0',
+                                style: AppTextStyles.monserrat700(fontSize: 18),
+                              ),
                             ),
                           ],
                         ),

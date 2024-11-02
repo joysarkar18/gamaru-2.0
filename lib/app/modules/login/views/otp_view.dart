@@ -103,20 +103,32 @@ class OtpView extends GetView<LoginController> {
                 ],
               ),
               const Spacer(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Didn't receive any code?",
-                    style: AppTextStyles.monserrat500(),
-                  ),
-                  6.kwidthBox,
-                  Text(
-                    "Resend Code",
-                    style: AppTextStyles.monserrat600(
-                        color: AppColors.java, fontSize: 15),
-                  ),
-                ],
+              Obx(
+                () => Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Didn't receive any code?",
+                      style: AppTextStyles.monserrat500(),
+                    ),
+                    6.kwidthBox,
+                    if (controller.countdown.value == 0)
+                      InkWell(
+                        onTap: controller.resendOtp,
+                        child: Text(
+                          "Resend Code",
+                          style: AppTextStyles.monserrat600(
+                              color: AppColors.java, fontSize: 15),
+                        ),
+                      ),
+                    if (controller.countdown.value > 0)
+                      Text(
+                        "${controller.countdown.value} Sec.",
+                        style: AppTextStyles.monserrat600(
+                            color: AppColors.java, fontSize: 15),
+                      ),
+                  ],
+                ),
               ),
               10.kheightBox,
               CustomElevatedButton(

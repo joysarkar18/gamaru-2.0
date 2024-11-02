@@ -10,15 +10,18 @@ import 'package:gamaru/app/services/responsive_ui_service.dart';
 import 'package:get/get.dart';
 
 class FeaturedGameCard extends StatelessWidget {
-  const FeaturedGameCard({super.key});
+  const FeaturedGameCard(
+      {super.key, required this.width, required this.isHome});
+  final double width;
+  final bool isHome;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 245.kh,
-      margin: const EdgeInsets.only(left: 18),
+      height: isHome ? 245 : 274,
+      margin: EdgeInsets.only(left: isHome ? 18 : 0),
       padding: const EdgeInsets.all(8),
-      width: 300.kw,
+      width: width,
       decoration: BoxDecoration(
           color: AppColors.dune, borderRadius: BorderRadius.circular(16)),
       child: Column(
@@ -28,7 +31,7 @@ class FeaturedGameCard extends StatelessWidget {
             child: CommonImageView(
               url:
                   "https://staticg.sportskeeda.com/editor/2024/09/ddf63-17260436951136-1920.jpg",
-              height: 70.kh,
+              height: isHome ? 70 : 90,
               width: 100.w,
               fit: BoxFit.cover,
             ),
@@ -39,15 +42,16 @@ class FeaturedGameCard extends StatelessWidget {
             style: AppTextStyles.monserrat700(fontSize: 17),
           ),
           4.kheightBox,
+          const Spacer(),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 6,
                 ),
                 height: 24,
-                width: 135.kw,
+                width: isHome ? 138.kw : 42.w,
                 decoration: BoxDecoration(
                     color: AppColors.oxfordBlue,
                     borderRadius: BorderRadius.circular(4)),
@@ -77,7 +81,7 @@ class FeaturedGameCard extends StatelessWidget {
               ),
               Container(
                 height: 24,
-                width: 135.kw,
+                width: isHome ? 138.kw : 42.w,
                 padding: const EdgeInsets.symmetric(
                   horizontal: 6,
                 ),
@@ -106,14 +110,14 @@ class FeaturedGameCard extends StatelessWidget {
           ),
           8.kheightBox,
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 6,
                 ),
                 height: 24,
-                width: 135.kw,
+                width: isHome ? 138.kw : 42.w,
                 decoration: BoxDecoration(
                     color: AppColors.oxfordBlue,
                     borderRadius: BorderRadius.circular(4)),
@@ -140,7 +144,7 @@ class FeaturedGameCard extends StatelessWidget {
                   horizontal: 6,
                 ),
                 height: 24,
-                width: 135.kw,
+                width: isHome ? 138.kw : 42.w,
                 decoration: BoxDecoration(
                     color: AppColors.oxfordBlue,
                     borderRadius: BorderRadius.circular(4)),
@@ -172,14 +176,14 @@ class FeaturedGameCard extends StatelessWidget {
           ),
           8.kheightBox,
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 6,
                 ),
                 height: 24,
-                width: 135.kw,
+                width: isHome ? 138.kw : 42.w,
                 decoration: BoxDecoration(
                     color: AppColors.oxfordBlue,
                     borderRadius: BorderRadius.circular(4)),
@@ -206,7 +210,7 @@ class FeaturedGameCard extends StatelessWidget {
                   horizontal: 6,
                 ),
                 height: 24,
-                width: 135.kw,
+                width: isHome ? 138.kw : 42.w,
                 decoration: BoxDecoration(
                     color: AppColors.oxfordBlue,
                     borderRadius: BorderRadius.circular(4)),
@@ -250,7 +254,7 @@ class FeaturedGameCard extends StatelessWidget {
                       buttonText: "Details",
                       height: 30,
                       textStyle: AppTextStyles.monserrat600(),
-                      width: 135.kw,
+                      width: isHome ? 138.kw : 42.w,
                       onPressed: () {
                         Get.toNamed(Routes.GAME_DETAILS);
                       }),
@@ -267,7 +271,7 @@ class FeaturedGameCard extends StatelessWidget {
                       buttonText: "Join Now",
                       height: 30,
                       textStyle: AppTextStyles.monserrat600(),
-                      width: 135.kw,
+                      width: isHome ? 138.kw : 42.w,
                       onPressed: () {}),
                 ),
               ),

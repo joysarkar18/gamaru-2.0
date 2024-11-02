@@ -6,15 +6,16 @@ import 'package:gamaru/app/constants/app_text_styles.dart';
 import 'package:gamaru/app/services/responsive_ui_service.dart';
 
 class TournamentCard extends StatelessWidget {
-  const TournamentCard({super.key});
+  const TournamentCard({super.key, required this.isHome});
+  final bool isHome;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 210.kh,
-      margin: const EdgeInsets.only(left: 18),
+      height: isHome ? 215 : 240,
+      margin: EdgeInsets.only(left: isHome ? 18 : 0),
       padding: const EdgeInsets.all(8),
-      width: 270.kw,
+      width: isHome ? 270.kw : 100.w,
       decoration: BoxDecoration(
           color: AppColors.dune, borderRadius: BorderRadius.circular(16)),
       child: Column(
@@ -24,7 +25,7 @@ class TournamentCard extends StatelessWidget {
             child: CommonImageView(
               url:
                   "https://staticg.sportskeeda.com/editor/2024/09/ddf63-17260436951136-1920.jpg",
-              height: 150.kh,
+              height: isHome ? 150 : 180,
               width: 100.w,
               fit: BoxFit.cover,
             ),
@@ -43,7 +44,7 @@ class TournamentCard extends StatelessWidget {
                       buttonText: "Details",
                       height: 30,
                       textStyle: AppTextStyles.monserrat600(),
-                      width: 31.w,
+                      width: isHome ? 31.w : 41.w,
                       onPressed: () {}),
                 ),
               ),
@@ -58,7 +59,7 @@ class TournamentCard extends StatelessWidget {
                       buttonText: "Join Now",
                       height: 30,
                       textStyle: AppTextStyles.monserrat600(),
-                      width: 31.w,
+                      width: isHome ? 31.w : 41.w,
                       onPressed: () {}),
                 ),
               ),
